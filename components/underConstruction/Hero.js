@@ -1,16 +1,23 @@
 // import Link from 'next/link';
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
+import tienda from '../images/tienda-entrada.jpg';
 
 function Hero() {
 	return (
 		<div className='hero h-full'>
-			<div className='hero-body'></div>
+			<Image
+				src={tienda}
+				className='absolute min-h-full w-full -z-10'
+				alt=''
+				fill
+			/>
 			<div className='overlay'></div>
-			<div className='anuncio flex flex-col justify-center'>
-				<div className='text-center font-bold mb-16'>
+			<div className='anuncio flex flex-col justify-evenly'>
+				<div className='text-center font-bold'>
 					<h1 className='chizone-title'>ChicZone</h1>
-					<div className='flex flex-col text-white bg-gray-300 text-xs justify-center'>
+					<div className='flex flex-col text-gray-800 bg-gray-300 text-xs justify-center'>
 						<address className='text-sm hover:text-red-300'>
 							<Link
 								href='https://goo.gl/maps/NFAPjcQcJrraN4tb9'
@@ -25,15 +32,15 @@ function Hero() {
 						</div>
 					</div>
 				</div>
-				<div className='bg-bganuncio mx-2 text-center px-6 py-8 rounded-xl'>
-					<h1 className='uppercase font-bold text-xl text-white px-3 pb-2'>
+				<div className='bg-bganuncio mx-2 mb-16 text-center px-12 py-12 rounded-2xl'>
+					<h1 className='uppercase font-bold text-2xl text-white px-3 pb-2'>
 						Rebajas por Black Friday
 					</h1>
-					<h2 className='text-lg text-white pb-6 '>
+					<h2 className='text-xl text-white pb-6 '>
 						¡Adelanta tus compras de Navidad!
 					</h2>
 					<div className='bg-white rounded-lg mb-2'>
-						<p className='text-sm py-1'>Desde el 2 al 30 de noviembre 2022</p>
+						<p className='text-md py-1'>Desde el 2 al 30 de noviembre 2022</p>
 					</div>
 				</div>
 			</div>

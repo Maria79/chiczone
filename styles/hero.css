@@ -5,6 +5,7 @@
 	width: 100%;
 	min-height: 100vh;
 }
+
 .hero-body {
 	position: absolute;
 	width: 100%;
@@ -22,6 +23,7 @@
 	height: 100vh;
 	top: 0;
 	background-color: rgba(0, 0, 0, 0.3);
+	z-index: -1;
 }
 .anuncio {
 	z-index: 1;
@@ -36,6 +38,6 @@
 }
 @media (max-width: 640px) {
 	.chizone-title {
-		font-size: 17vw;
+		font-size: 18vw;
 	}
 }

@@ -10,7 +10,7 @@ function Nav() {
 				<div className='absolute z-20 top-10 bg-slate-300 rounded-full'>
 					<Link href='/'>
 						<div className=''></div>
-						<Image src={Logo} alt='Logo' width={70} height={70} />
+						<Image src={Logo} alt='Logo' width={80} height={80} />
 					</Link>
 				</div>
 			</div>
