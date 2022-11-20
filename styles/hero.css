@@ -11,7 +11,7 @@
 	width: 100%;
 	min-height: 100vh;
 	top: 0;
-	background-image: url('../components/images/tienda-entrada.jpg');
+	background-image: url('/components/images/tienda-entrada.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
