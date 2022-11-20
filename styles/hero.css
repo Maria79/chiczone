@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&display=swap');
+.hero {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+}
+.hero-body {
+	position: absolute;
+	width: 100%;
+	min-height: 100vh;
+	top: 0;
+	background-image: url('../components/images/tienda-entrada.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.anuncio {
+	z-index: 1;
+	min-height: 100vh;
+	/* margin-top: 15px; */
+}
+.chizone-title {
+	font-family: 'Bitter', serif;
+	text-shadow: 1px 1px 1px rgba(243, 177, 158);
+	font-size: 7vw;
+	color: rgb(243, 177, 158);
+}
+@media (max-width: 640px) {
+	.chizone-title {
+		font-size: 17vw;
+	}
+}
