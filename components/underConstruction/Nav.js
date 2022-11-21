@@ -7,7 +7,7 @@ function Nav() {
 	return (
 		<header className=''>
 			<div className='flex w-full items-center justify-around relative'>
-				<div className='absolute z-20 top-10 bg-slate-300 rounded-full'>
+				<div className='absolute z-20 top-8 bg-slate-300 rounded-full'>
 					<Link href='/'>
 						<div className=''></div>
 						<Image src={Logo} alt='Logo' width={80} height={80} />

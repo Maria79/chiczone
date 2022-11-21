@@ -32,11 +32,14 @@
 	min-height: 100vh;
 	/* margin-top: 15px; */
 }
+
 .chizone-title {
 	font-family: 'Bitter', serif;
+	font-weight: 300;
+	font-style: italic;
 	text-shadow: 1px 1px 1px rgba(243, 177, 158);
 	font-size: 7vw;
-	color: rgb(243, 177, 158);
+	color: #8c8887;
 }
 @media (max-width: 640px) {
 	.chizone-title {
