@@ -14,11 +14,11 @@ function Hero() {
 				fill
 			/>
 			<div className='overlay'></div>
-			<div className='anuncio flex flex-col justify-evenly'>
+			<div className='anuncio flex flex-col justify-center'>
 				<div className='text-center font-bold'>
 					<h1 className='chizone-title'>ChicZone</h1>
-					<div className='flex flex-col text-gray-800 bg-gray-300 text-xs justify-center'>
-						<address className='text-sm hover:text-red-300'>
+					<div className='flex flex-col text-gray-800 bg-gray-300 text-xs justify-center py-1'>
+						<address className='text-xs hover:text-red-300'>
 							<Link
 								href='https://goo.gl/maps/NFAPjcQcJrraN4tb9'
 								target='_blank'
@@ -27,12 +27,12 @@ function Hero() {
 								C. de Zamora, 13, Puerto de la Cruz
 							</Link>
 						</address>
-						<div className='text-sm hover:text-red-300'>
+						<div className='text-xs hover:text-red-300'>
 							<Link href='tel:+34922984288'>Contacto: 922 984288</Link>
 						</div>
 					</div>
 				</div>
-				<div className='bg-bganuncio mx-2 mb-16 text-center px-12 py-12 rounded-2xl'>
+				<div className='bg-bganuncio max-w-xs mx-auto opacity-70  mb-6 mt-8 text-center px-12 py-12 rounded-2xl'>
 					<h1 className='uppercase font-bold text-2xl text-white px-3 pb-2'>
 						Rebajas por Black Friday
 					</h1>
