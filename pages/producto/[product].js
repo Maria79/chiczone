@@ -20,6 +20,8 @@ import { async } from '@firebase/util';
 import Router, { useRouter } from 'next/router';
 const db = getFirestore(firebaseApp);
 
+//
+
 export default function Product({ producto }) {
 	const { query } = useRouter();
 	const router = useRouter();

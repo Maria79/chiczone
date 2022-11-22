@@ -35,22 +35,19 @@ export default function Productos({ productos }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='w-3/4  mx-auto mt-10'>
-				{/* <div className='flex justify-center'>
-					<Link href='./formulario'>
-						<button className='tex mb-4'>Agregar producto</button>
-					</Link>
-				</div> */}
 				<div className='w-3/4 flex flex-wrap gap-2 justify-center mx-auto'>
 					{productos.map((product) => (
-						<div className='mb-5  w-64' key={product.id}>
-							<div className=''>
-								<img src={product.url} alt='img' className='bg-red-400' />
-							</div>
-							<h5 className='text-lg font-bold'>{product.name}</h5>
-							<div className='text'>
+						<div
+							className='mb-5 w-48 border-2 px-2 py-2 rounded-xl'
+							key={product.id}
+						>
+							<div className=''></div>
+							<img src={product.url} alt='img' className='rounded-lg' />
+							<h5 className='text-lg font-bold mt-2'>{product.name}</h5>
+							{/* <div className='text'>
 								<p>{product.desc}</p>
-							</div>
-							<div className='text font-bold'>
+							</div> */}
+							<div className=' font-semibold'>
 								<p>{product.price}€</p>
 							</div>
 
