@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/underConstruction/Layout';
 import Hero from '../components/underConstruction/Hero';
+import Facebook from '../components/underConstruction/facebook';
 
 export default function Home() {
 	// const router = useRouter();
@@ -12,6 +13,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Hero />
+			{/* <Facebook /> */}
 		</Layout>
 	);
 }

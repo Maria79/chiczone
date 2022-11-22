@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from './images/logo-cir-trans.png';
+// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 function Nav() {
 	//esta funcion lo que hace es ayudarnos con el error de bootstrap
@@ -19,9 +21,10 @@ function Nav() {
 							C. de Zamora, 13, Puerto de la Cruz
 						</a>
 					</address>
-					<a className='hover:text-red-300' href='tel:+34922984288'>
-						Contacto: 922 984288
-					</a>
+					<WhatsAppIcon
+						href='https://api.whatsapp.com/send?phone=34644241963'
+						className='cursor-pointer text-green-300 hover:text-green-600'
+					></WhatsAppIcon>
 				</div>
 			</div>
 

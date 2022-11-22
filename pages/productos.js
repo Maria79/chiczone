@@ -35,31 +35,27 @@ export default function Productos({ productos }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='w-3/4  mx-auto mt-10'>
-				<div className='flex justify-center'>
+				{/* <div className='flex justify-center'>
 					<Link href='./formulario'>
-						<button className='bg-red-300 mb-4'>Agregar producto</button>
+						<button className='tex mb-4'>Agregar producto</button>
 					</Link>
-				</div>
-				<div className='grid grid-cols-4 gap-4 bg-gray-400'>
+				</div> */}
+				<div className='w-3/4 flex flex-wrap gap-2 justify-center mx-auto'>
 					{productos.map((product) => (
-						<div className='' key={product.id}>
-							<h5 className='text-lg font-bold'>{product.name}</h5>
-							<div className='h-20'>
-								<img
-									src={product.url}
-									alt='img'
-									className='object-contain bg-red-400'
-								/>
+						<div className='mb-5  w-64' key={product.id}>
+							<div className=''>
+								<img src={product.url} alt='img' className='bg-red-400' />
 							</div>
-							<div className='text bg-blue-200'>
+							<h5 className='text-lg font-bold'>{product.name}</h5>
+							<div className='text'>
 								<p>{product.desc}</p>
 							</div>
-							<div className='text bg-green-300'>
+							<div className='text font-bold'>
 								<p>{product.price}€</p>
 							</div>
 
 							<button
-								className='bg-blue-200 px-3 py-1 rounded text-white  bottom-1'
+								className='bg-brownLogo px-3 py-1 mx-auto rounded text-white  bottom-1'
 								onClick={() => router.push(`/producto/${product.id}`)}
 							>
 								View

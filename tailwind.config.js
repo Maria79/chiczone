@@ -10,6 +10,12 @@ module.exports = {
 			colors: {
 				grislogo: '#575854',
 				bganuncio: '#373131',
+				brownLogo: '#8b8786',
+				instaY: '#feda75',
+				instaO: '#fa7e1e',
+				instaP: '#d62976',
+				instaPu: '#962fbf',
+				instaB: '#4f5bd5',
 			},
 		},
 		screens: {
