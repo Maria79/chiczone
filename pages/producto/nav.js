@@ -9,7 +9,7 @@ function Nav() {
 	//esta funcion lo que hace es ayudarnos con el error de bootstrap
 
 	return (
-		<header className='flex flex-col h-3/5 mb-4'>
+		<header className='flex flex-col h-3/5'>
 			<div className='w-full flex bg-slate-600 px-3'>
 				<div className='flex justify-between items-center text-xs w-3/4 mx-auto xs:w-full xs:px-1'>
 					<address className=' hover:text-red-300'>
@@ -35,7 +35,7 @@ function Nav() {
 			</div>
 
 			{/* navbar */}
-			<div className=' sm:w-3/4 mx-auto flex xs:w-full'>
+			<div className=' sm:w-3/4 mx-auto  mt-2 flex xs:w-full'>
 				{/* Logo */}
 				<div className='w-20 h-20 relative'>
 					<Link href='/'>

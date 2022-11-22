@@ -10,7 +10,7 @@ function Nav() {
 		<header className=''>
 			<div className='flex relative'>
 				<div className='absolute w-full z-20 top-2'>
-					<div className='flex justify-start px-6 items-center'>
+					<div className='flex justify-start px-6 '>
 						<Link href='/'>
 							<div className='rounded-full'>
 								<Image
