@@ -1,16 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../images/logo-medio-blanco.png';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import Menu from '../Menu/menu';
 
+//
 function Nav() {
+	const [open, setOpen] = useState(true);
+	const handleMenu = () => {
+		if (open == true) {
+			setOpen(false);
+		} else {
+			setOpen(true);
+		}
+	};
+
+	//
 	return (
 		<header className=''>
 			<div className='flex relative'>
 				<div className='absolute w-full z-20 top-2'>
-					<div className='flex justify-start px-6 '>
+					<div className='max-w-5xl mx-auto flex justify-start px-6'>
 						<Link href='/'>
 							<div className='rounded-full'>
 								<Image
@@ -23,15 +37,31 @@ function Nav() {
 							</div>
 						</Link>
 						<div className='flex ml-auto'>
-							<FacebookOutlinedIcon className='text-blue-600 mr-3 text-3xl cursor-pointer hover:scale-125'>
-								<Link
-									href='https://www.facebook.com/profile.php?id=100083016798580'
-									target='_blank'
-								></Link>
-							</FacebookOutlinedIcon>
-							<InstagramIcon className=' text-pink-500 text-3xl cursor-pointer hover:scale-125'>
-								<Link target='_blank'></Link>
-							</InstagramIcon>
+							<Link
+								href='https://www.facebook.com/profile.php?id=100083016798580'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<FacebookOutlinedIcon className='text-blue-600 mr-3 text-3xl cursor-pointer hover:scale-125'></FacebookOutlinedIcon>
+							</Link>
+							<Link
+								target='_blank'
+								href='https://www.instagram.com/chiczone_puerto/'
+							>
+								<InstagramIcon className=' text-pink-500 text-3xl cursor-pointer hover:scale-125'></InstagramIcon>
+							</Link>
+							<div onClick={handleMenu}>
+								{open ? (
+									<MenuIcon className='text-3xl ml-3 text-slate-800 cursor-pointer hover:scale-125'></MenuIcon>
+								) : (
+									<div>
+										<CloseIcon className='text-3xl ml-3 text-slate-800 cursor-pointer hover:scale-125'></CloseIcon>
+										<div className='absolute top-14 left-0 w-full'>
+											<Menu />
+										</div>
+									</div>
+								)}
+							</div>
 						</div>
 					</div>
 				</div>

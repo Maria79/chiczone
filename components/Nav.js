@@ -1,62 +1,70 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from './images/logo-cir-trans.png';
-// import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Logo from '../components/images/logo-cir-trans.png';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import Menu from './Menu/menu';
 
+//
 function Nav() {
-	//esta funcion lo que hace es ayudarnos con el error de bootstrap
+	const [open, setOpen] = useState(true);
+	const handleMenu = () => {
+		if (open == true) {
+			setOpen(false);
+		} else {
+			setOpen(true);
+		}
+	};
 
+	//
 	return (
-		<header className='flex flex-col h-3/5 min-w-full'>
-			<div className='w-full justify-end flex bg-slate-600'>
-				<div className='flex text-xs pr-6'>
-					<address className='text-xs inline pr-4 hover:text-red-300'>
-						<a
-							href='https://goo.gl/maps/NFAPjcQcJrraN4tb9'
-							target='_blank'
-							rel='noopener noreferrer'
-						>
-							C. de Zamora, 13, Puerto de la Cruz
-						</a>
-					</address>
-					<WhatsAppIcon
-						href='https://api.whatsapp.com/send?phone=34644241963'
-						className='cursor-pointer text-green-300 hover:text-green-600'
-					></WhatsAppIcon>
+		<header className='fixed w-full h-8 top-0 bg-white'>
+			<div className='flex max-w-2xl mx-auto relative'>
+				<div className='absolute bg-white w-full z-20 top-2'>
+					<div className='flex bg-white justify-start px-6'>
+						<Link href='/'>
+							<div className='rounded-full'>
+								<Image
+									src={Logo}
+									alt='Logo'
+									width={55}
+									height={55}
+									className='rounded-full'
+								/>
+							</div>
+						</Link>
+						<div className='flex ml-auto'>
+							<Link
+								href='https://www.facebook.com/profile.php?id=100083016798580'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<FacebookOutlinedIcon className='text-blue-600 mr-3 text-3xl cursor-pointer hover:scale-125'></FacebookOutlinedIcon>
+							</Link>
+							<Link
+								target='_blank'
+								href='https://www.instagram.com/chiczone_puerto/'
+							>
+								<InstagramIcon className=' text-pink-500 text-3xl cursor-pointer hover:scale-125'></InstagramIcon>
+							</Link>
+							<div onClick={handleMenu}>
+								{open ? (
+									<MenuIcon className='text-3xl ml-3 text-slate-800 cursor-pointer hover:scale-125'></MenuIcon>
+								) : (
+									<div>
+										<CloseIcon className='text-3xl ml-3 text-slate-800 cursor-pointer hover:scale-125'></CloseIcon>
+										<div className='absolute top-14 left-0 w-full'>
+											<Menu />
+										</div>
+									</div>
+								)}
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-
-			<div className='flex w-full items-center justify-around'>
-				<div className='flex'>
-					<Link href='/'>
-						<Image src={Logo} alt='Logo' width={50} height={50} />
-					</Link>
-				</div>
-				<nav className=''>
-					<ul className='flex'>
-						<li className='px-2'>
-							<Link href='/ropa'>Ropa</Link>
-						</li>
-						<li className='px-2'>
-							<Link href='/accesorios'>Accesorios</Link>
-						</li>
-						<li className='px-2'>
-							<Link href='/novedades'>Novedades</Link>
-						</li>
-					</ul>
-				</nav>
-				{/* <div className='flex gap-1'>
-					<Link href='/productos'>
-						<button
-							className='bg-gray-300 px-1
-						 py 1 text-xs'
-						>
-							Productos
-						</button>
-					</Link>
-				</div> */}
 			</div>
 		</header>
 	);

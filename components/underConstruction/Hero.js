@@ -21,7 +21,7 @@ function Hero() {
 			<div className='anuncio flex flex-col justify-center'>
 				<div className='text-center font-bold'>
 					<h1 className='chizone-title text-10xl'>ChicZone</h1>
-					<div className='flex flex-col text-gray-800 bg-gray-300 text-xs justify-center py-1'>
+					<div className='flex flex-col max-w-2xl mx-auto text-gray-800 bg-gray-300 text-xs justify-center py-1'>
 						<div className='flex items-center justify-center hover:text-red-300'>
 							<PlaceIcon></PlaceIcon>
 							<address className='text-sm'>
@@ -39,14 +39,14 @@ function Hero() {
 								<CallIcon></CallIcon>
 								<Link href='tel:+34922984288'>Contacto: 922 984288</Link>
 							</div>
-							<Link href='https://api.whatsapp.com/send?phone=34644241963'>
+							<Link href='https://api.whatsapp.com/send?phone=34634309049'>
 								<WhatsAppIcon className='w-7 h-7 text-green-800 ml-2 hover:text-green-600'></WhatsAppIcon>
 							</Link>
 						</div>
 					</div>
 				</div>
 				<div className='bg-bganuncio max-w-xs mx-auto opacity-70  mb-6 mt-8 text-center px-10 py-12 rounded-2xl'>
-					<h1 className='uppercase font-bold text-2xl text-white px-2 pb-2'>
+					<h1 className=' uppercase font-bold text-2xl text-white px-2 pb-2'>
 						Rebajas por Black Friday
 					</h1>
 					<h2 className='text-xl text-white pb-6 '>

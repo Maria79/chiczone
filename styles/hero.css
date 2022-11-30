@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:&display=swap');
 
 .hero {
 	position: relative;
@@ -23,7 +24,7 @@
 	width: 100%;
 	height: 100vh;
 	top: 0;
-	background-color: rgba(57, 47, 57, 0.326);
+	background-color: rgba(251, 248, 251, 0.219);
 	z-index: -1;
 }
 .anuncio {
@@ -36,13 +37,9 @@
 	font-family: 'Bitter', serif;
 	font-weight: 300;
 	font-style: italic;
-	text-shadow: 1px 1px 2px rgba(52, 41, 39, 0.612);
+	text-shadow: 2px 2px 2px rgba(24, 21, 21, 0.684);
 	font-size: 10vw;
 	color: #8c8887;
-}
-.fb-page {
-	position: absolute;
-	bottom: 55px;
 }
 @media (max-width: 640px) {
 	.chizone-title {

@@ -17,6 +17,10 @@ module.exports = {
 				instaPu: '#962fbf',
 				instaB: '#4f5bd5',
 			},
+			fontFamily: {
+				formulario: ['Bitter', 'serif'],
+				anuncio: ['Open Sans', 'sans-serif'],
+			},
 		},
 		screens: {
 			xs: '320px',
