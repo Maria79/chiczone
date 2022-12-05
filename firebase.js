@@ -16,15 +16,6 @@ const firebaseConfig = {
 	appId: publicApiKey,
 };
 
-// const firebaseConfig = {
-// 	apiKey: 'AIzaSyCY5HO3TstP_fUfX4M-xz01vdVz_HRKBD0',
-// 	authDomain: 'chiczone-917b9.firebaseapp.com',
-// 	projectId: 'chiczone-917b9',
-// 	storageBucket: 'chiczone-917b9.appspot.com',
-// 	messagingSenderId: '195191504815',
-// 	appId: '1:195191504815:web:33e61aef52a554c3f8795a',
-// };
-
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 export default firebaseApp;
