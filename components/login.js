@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-// import Formulario from './formulario';
+import Image from 'next/image';
 import { auth } from '../firebase';
 import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { useRouter } from 'next/router';
+import Logo from './images/logo-grande.jpg';
+import Link from 'next/link';
 
 function Login() {
 	const router = useRouter();
@@ -44,57 +46,54 @@ function Login() {
 		setEmail('');
 		setPassword('');
 	};
-	//Logout
-	// const handleLogout = async (e) => {
-	// 	e.preventDefault();
-	// 	// 	// await signOut(auth);
-	// 	signOut(auth)
-	// 		.then(() => {
-	// 			// alert('Sign-out successful');
-	// 		})
-	// 		.catch((error) => {
-	// 			// An error happened.
-	// 		});
-	// 	setEmail('');
-	// 	setPassword('');
-	// };
 
 	return (
-		<div className='max-w-md mx-auto mt-10 flex-col'>
-			<h3 className='text-md'>Login:</h3>
-			<div className='max-w-sm mx-auto flex flex-col'>
-				<div className='flex mb-2'>
-					<label className='mr-2' htmlFor='email'>
-						Email:{' '}
-					</label>
-					<input
-						className='border-2 px-2'
-						type='email'
-						name='email'
-						value={email}
-						placeholder='Email...'
-						onChange={handleEmail}
-					/>
+		<div className='max-w-md px-3 mx-auto'>
+			<Link href='/'>
+				<Image
+					className='mt-8'
+					src={Logo}
+					alt=''
+					width={100}
+					height={100}
+				></Image>
+			</Link>
+			<div className=' max-w-md px-3 mx-auto mt-10 flex-col'>
+				<h3 className='mb-6 text-2xl font-semibold text-slate-600'>Entrar:</h3>
+				<div className=' max-w-sm mx-auto flex flex-col'>
+					<div className='flex justify-around mb-2 '>
+						<label className='mr-2 w-1/3 ' htmlFor='email'>
+							Email:{' '}
+						</label>
+						<input
+							className='border-2 px-2 w-2/3'
+							type='email'
+							name='email'
+							value={email}
+							placeholder='Email...'
+							onChange={handleEmail}
+						/>
+					</div>
+					<div className='flex justify-around mb-2'>
+						<label className='mr-2 w-1/3' htmlFor='password'>
+							Contraseña:
+						</label>
+						<input
+							className='border-2 px-2 w-2/3'
+							type='password'
+							name='password'
+							value={password}
+							placeholder='Password...'
+							onChange={handlePassword}
+						/>
+					</div>
+					<button
+						className='border-2 rounded-md mt-2 py-1 px-4 max-w-xs mx-auto hover:bg-purple-400'
+						onClick={handleLogin}
+					>
+						Entrar
+					</button>
 				</div>
-				<div className='flex mb-2'>
-					<label className='mr-2' htmlFor='password'>
-						Password:
-					</label>
-					<input
-						className='border-2 px-2'
-						type='password'
-						name='password'
-						value={password}
-						placeholder='Password...'
-						onChange={handlePassword}
-					/>
-				</div>
-				<button
-					className='border-2 px-3 max-w-xs hover:bg-slate-400'
-					onClick={handleLogin}
-				>
-					Login
-				</button>
 			</div>
 		</div>
 	);

@@ -48,9 +48,6 @@ export default function Productos({ productos }) {
 							<h5 className='text-lg font-bold mt-2 mb-1 truncate xs:text-sm'>
 								{product.name}
 							</h5>
-							{/* <div className='text'>
-								<p>{product.desc}</p>
-							</div> */}
 							<div className=' font-semibold mb-2 xs:text-sm'>
 								<p>{product.price}€</p>
 							</div>
