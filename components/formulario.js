@@ -124,12 +124,12 @@ export default function Formulario() {
 			console.error('Error adding document: ', e);
 		}
 
-		setDatos({ ...valorInicial });
-		setImg('');
+		setImg(null);
 		setSelected('');
 		setSize('M');
 		setUrl('');
 		setDate('');
+		setDatos({ ...valorInicial });
 	};
 
 	return (
@@ -258,6 +258,7 @@ export default function Formulario() {
 							accept='image/*'
 							value={img?.name}
 							onChange={handleImageChange}
+							multiple
 						/>
 					</div>
 					{/*  */}

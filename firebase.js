@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getAnalytics } from 'firebase/analytics';
 
 const key = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
 const publicApiKey = process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY;
@@ -14,10 +15,12 @@ const firebaseConfig = {
 	storageBucket: 'chiczone-917b9.appspot.com',
 	messagingSenderId: '195191504815',
 	appId: publicApiKey,
+	measurementId: 'G-9RMH4YR678',
 };
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 export default firebaseApp;
+// export const analytics = getAnalytics(firebaseApp);
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(firebaseApp);

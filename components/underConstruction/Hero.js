@@ -45,22 +45,9 @@ function Hero() {
 						</div>
 					</div>
 				</div>
-				<div className='bg-bganuncio max-w-xs mx-auto opacity-70  mb-6 mt-8 text-center px-10 py-12 rounded-2xl'>
-					<h1 className=' uppercase font-bold text-2xl text-white px-2 pb-2'>
-						Rebajas por Black Friday
-					</h1>
-					<h2 className='text-xl text-white pb-6 '>
-						¡Adelanta tus compras de Navidad!
-					</h2>
-					<div className='bg-white rounded-lg mb-2 px-1 py-2'>
-						<p className='text-md py-1'>Desde el 2 al 30 de noviembre 2022</p>
-					</div>
-				</div>
 			</div>
-			{/* <Facebook /> */}
 		</div>
 	);
 }
 
 export default Hero;
-// sm:w-56 md:w-2/4 bg-slate-800 px-6 py-10 text-center flex flex-col items-center gap-3

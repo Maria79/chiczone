@@ -51,11 +51,11 @@ function Login() {
 		<div className='max-w-md px-3 mx-auto'>
 			<Link href='/'>
 				<Image
+					quality={80}
 					className='mt-8'
 					src={Logo}
 					alt=''
-					width={100}
-					height={100}
+					style={{ width: '250px', height: '200px' }}
 				></Image>
 			</Link>
 			<div className=' max-w-md px-3 mx-auto mt-10 flex-col'>

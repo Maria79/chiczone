@@ -17,6 +17,10 @@ export default function Home() {
 					content='Tienda de ropa en el centro del Puerto de la Cruz.'
 				/>
 				<meta
+					property='og:image'
+					content='https://www.chiczone.es/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo-medio-blanco.57a6de3e.png&w=64&q=75'
+				/>
+				<meta
 					property='og:description'
 					content='Tienda de ropa en el centro del Puerto de la Cruz.'
 				/>
