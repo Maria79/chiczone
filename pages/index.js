@@ -14,7 +14,7 @@ export default function Home() {
 				<meta property='og:type' content='website' />
 				<meta
 					property='og:title'
-					content='Tienda de ropa en el centro del Puerto de la Cruz.'
+					content='Tienda de ropa de mujer en el centro del Puerto de la Cruz.'
 				/>
 				<meta
 					property='og:image'

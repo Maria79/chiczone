@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import React, { useRef, useState, useEffect } from 'react';
-import Layout from '../pages/producto/layout';
+import Layout from '../components/underConstruction/Layout';
 import { CheckIcon } from '@heroicons/react/24/solid';
 
 import { auth } from '../firebase';
@@ -44,7 +44,7 @@ export default function Formulario() {
 	const valorInicial = {
 		name: '',
 		desc: '',
-		price: '',
+		price: '0',
 	};
 	const imgInicial = useState({
 		image: '',
@@ -53,7 +53,7 @@ export default function Formulario() {
 	const [datos, setDatos] = useState(valorInicial);
 	const [size, setSize] = useState('M');
 	const [date, setDate] = useState('');
-	const [img, setImg] = useState('');
+	const [img, setImg] = useState([]);
 	const [url, setUrl] = useState('');
 	const [selected, setSelected] = useState('');
 
@@ -124,9 +124,9 @@ export default function Formulario() {
 			console.error('Error adding document: ', e);
 		}
 
-		setImg(null);
+		setImg([]);
 		setSelected('');
-		setSize('M');
+		setSize([]);
 		setUrl('');
 		setDate('');
 		setDatos({ ...valorInicial });
@@ -217,7 +217,7 @@ export default function Formulario() {
 					</div>
 					{/* Talla */}
 					<div className='py-2 flex justify-between'>
-						<label htmlFor='tallas'>Tallas: </label>
+						<label htmlFor='tallas'>Talla: </label>
 						<select
 							className='border-2 rounded-md px-3 mb-3'
 							name='tallas'
@@ -225,13 +225,13 @@ export default function Formulario() {
 							onChange={handleSizeChange}
 							defaultValue={'M'}
 						>
-							<option value='XXL'>XXL</option>
-							<option value='XL'>XL</option>
-							<option value='L'>L</option>
-							<option value='M'>M</option>
-							<option value='S'>S</option>
-							<option value='XS'>XS</option>
 							<option value='XXS'>XXS</option>
+							<option value='XS'>XS</option>
+							<option value='S'>S</option>
+							<option value='M'>M</option>
+							<option value='L'>L</option>
+							<option value='XL'>XL</option>
+							<option value='XXL'>XXL</option>
 						</select>
 					</div>
 					{/* Price */}

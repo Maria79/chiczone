@@ -2,6 +2,8 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getAnalytics } from 'firebase/analytics';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage, ref } from 'firebase/storage';
 
 const key = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
 const publicApiKey = process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY;
@@ -24,3 +26,6 @@ export default firebaseApp;
 // export const analytics = getAnalytics(firebaseApp);
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(firebaseApp);
+
+export const db = getFirestore(firebaseApp);
+export const storage = getStorage();

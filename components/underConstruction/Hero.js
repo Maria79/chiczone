@@ -10,42 +10,19 @@ import Facebook from './facebook';
 
 function Hero() {
 	return (
-		<div className='hero h-full relative'>
-			<Image
-				src={tienda}
-				className='absolute min-h-full w-full -z-10'
-				alt=''
-				fill
-			/>
-			<div className='overlay'></div>
-			<div className='anuncio flex flex-col justify-center'>
-				<div className='text-center font-bold'>
-					<h1 className='chizone-title text-10xl'>ChicZone</h1>
-					<div className='flex flex-col max-w-2xl mx-auto text-gray-800 bg-gray-300 text-xs justify-center py-1'>
-						<div className='flex items-center justify-center hover:text-red-300'>
-							<PlaceIcon></PlaceIcon>
-							<address className='text-sm'>
-								<Link
-									href='https://goo.gl/maps/NFAPjcQcJrraN4tb9'
-									target='_blank'
-									rel='noopener noreferrer'
-								>
-									C. de Zamora, 13, Puerto de la Cruz
-								</Link>
-							</address>
-						</div>
-						<div className='flex items-center justify-center'>
-							<div className='text-xs  hover:text-red-300'>
-								<CallIcon></CallIcon>
-								<Link href='tel:+34922984288'>Contacto: 922 984288</Link>
-							</div>
-							<Link href='https://api.whatsapp.com/send?phone=34634309049'>
-								<WhatsAppIcon className='w-7 h-7 text-green-800 ml-2 hover:text-green-600'></WhatsAppIcon>
-							</Link>
-						</div>
-					</div>
+		<div className=''>
+			<Image src={tienda} className='min-h-full w-full -z-10' alt='' fill />
+			{/* <div className='relative top-36 z-10'>
+				<img
+					src='https://prestashop.coderplace.com/PRS01/PRS01022/modules/tm_imageslider/views/img/sample-1.jpg'
+					alt=''
+				/>
+				<div className='absolute top-0 w-1/2 px-3 py-4'>
+					<p className='text-xs mb-2'>Shop Trending Collection</p>
+					<h3 className='font-semibold mb-2'>SHOP FOR WOMEN GET UP TO 50%</h3>
+					<button className='bg-black text-white px-2 py-1'>SHOP NOW</button>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }

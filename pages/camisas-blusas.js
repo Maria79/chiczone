@@ -35,7 +35,7 @@ export default function CamisasBlusas({ productos }) {
 				<div className='xs:w-full w-3/4 flex flex-wrap gap-2 justify-center mx-auto'>
 					{productos.map((product) => (
 						<div
-							className='mb-5 mx-2 w-32 border-2 px-2 py-2 rounded-xl'
+							className='mb-5 mx-2 w-32  px-2 py-2 rounded-xl'
 							key={product.id}
 						>
 							<div className=''></div>

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import StarRateIcon from '@mui/icons-material/StarRate';
+import StarHalfIcon from '@mui/icons-material/StarHalf';
 
 //importar firebase
 import firebaseApp from '../firebase';
@@ -36,19 +38,26 @@ function Combinados({ productos }) {
 				<div className='xs:w-full w-3/4 flex flex-wrap gap-2 justify-center mx-auto'>
 					{productos.map((product) => (
 						<div
-							className='mb-5 mx-2 w-32 border-2 px-2 py-2 rounded-xl'
+							className='mb-5 flex-1 mx-2 w-32 px-2 py-2 rounded-xl'
 							key={product.id}
 						>
 							<div className=''></div>
 							<img src={product.url} alt='img' className='rounded-lg' />
+							<div>
+								<StarRateIcon className='text-sm text-amber-400'></StarRateIcon>
+								<StarRateIcon className='text-sm text-amber-400'></StarRateIcon>
+								<StarRateIcon className='text-sm text-amber-400'></StarRateIcon>
+								<StarRateIcon className='text-sm text-amber-400'></StarRateIcon>
+								<StarHalfIcon className='text-sm text-amber-400'></StarHalfIcon>
+							</div>
 							<h5 className='text-lg font-bold mt-2 mb-1 truncate xs:text-sm'>
 								{product.name}
 							</h5>
 							{/* <div className='text'>
 								<p>{product.desc}</p>
 							</div> */}
-							<div className=' font-semibold mb-2 xs:text-sm'>
-								<p>{product.price}€</p>
+							<div className=' font-medium mb-2 xs:text-sm'>
+								<p>{product.price} €</p>
 							</div>
 
 							<div className='justify-center flex '>

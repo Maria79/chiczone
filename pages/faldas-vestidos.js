@@ -35,12 +35,12 @@ export default function FaldasVestidos({ productos }) {
 				<div className='xs:w-full w-3/4 flex flex-wrap gap-2 justify-center mx-auto'>
 					{productos.map((product) => (
 						<div
-							className='mb-5 mx-2 w-32 border-2 px-2 py-2 rounded-xl'
+							className='mb-5 mx-2 w-32  px-2 py-2 rounded-xl'
 							key={product.id}
 						>
 							<div className=''></div>
 							<img src={product.url} alt='img' className='rounded-lg' />
-							<h5 className='text-lg font-bold mt-2 mb-1 truncate xs:text-sm'>
+							<h5 className='text-lg flex-1 mt-2 mb-1 truncate xs:text-sm'>
 								{product.name}
 							</h5>
 							{/* <div className='text'>
