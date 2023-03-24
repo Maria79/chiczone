@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Layout from '../pages/producto/layout';
-// import Layout from './underConstruction/Layout';
+// import Layout from '../pages/producto/layout';
+import Layout from './underConstruction/Layout';
 
 //Logged In-Out
 import { CheckIcon } from '@heroicons/react/24/solid';
@@ -15,11 +15,11 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import Image from 'next/image';
 
 //Currency for price input
-const formatter = new Intl.NumberFormat('en-US', {
-	style: 'currency',
-	currency: 'EUR',
-	minimunFractionDigits: 2,
-});
+// const formatter = new Intl.NumberFormat('en-US', {
+// 	style: 'currency',
+// 	currency: 'EUR',
+// 	minimunFractionDigits: 2,
+// });
 
 //The Form Function
 export default function Form() {
@@ -71,6 +71,7 @@ export default function Form() {
 		setPrice('');
 		setImages([]);
 		setSizes('M');
+		setImageUrlList([]);
 	};
 
 	const handleImageChange = (event) => {
@@ -93,15 +94,15 @@ export default function Form() {
 
 	return (
 		<Layout>
-			<div className='absolute max-w-sm right-2 top-8'>
+			<div className='2xl:max-w-6xl lg:max-w-4xl md:max-w-2xl xs:max-w-sm mx-auto mt-20 text-end '>
 				<button
 					className='px-4 py-1 rounded-md bg-red-500 text-lg font-semibold text-slate-200 hover:bg-red-200 hover:text-slate-700'
 					onClick={handleLogout}
 				>
-					Log Out
+					Salir
 				</button>
 			</div>
-			<div className='text-center'>
+			<div className='text-center mt-8'>
 				<h1 className='font-formulario text-slate-700 font-light text-4xl'>
 					Insertar prenda:
 				</h1>
@@ -115,12 +116,12 @@ export default function Form() {
 					className='relative min-h-fit max-w-2xl mx-auto px-3 py-4'
 				>
 					{/* Name */}
-					<div>
+					<div className='py-2 flex justify-between'>
 						<label className='mx-auto' htmlFor='name'>
 							Name:
 						</label>
 						<input
-							className='border-2  rounded-md w-full ml-2'
+							className='border-2 rounded-md w-full ml-2'
 							type='text'
 							id='name'
 							value={name}
@@ -149,6 +150,7 @@ export default function Form() {
 							defaultValue={'M'}
 							onChange={(e) => setSizes(e.target.value)}
 						>
+							<option value='-'>-</option>
 							<option value='SX'>SX</option>
 							<option value='S'>S</option>
 							<option value='M'>M</option>
@@ -162,10 +164,11 @@ export default function Form() {
 							Precio: <span>€</span>
 						</label>
 						<input
-							className='border-2 rounded-md ml-2 pl-2'
+							className='w-fit border-2 rounded-md ml-2 pl-2'
 							id='price'
 							type='text'
 							value={price}
+							onFocus={() => setPrice('')}
 							onChange={(e) => setPrice(e.target.value)}
 						/>
 					</div>
@@ -190,8 +193,11 @@ export default function Form() {
 						{/* BTN Submit */}
 					</div>
 					<div className='mt-2 text-center'>
-						<button className='bg-red-300 px-7 py-2 rounded' type='submit'>
-							Submit
+						<button
+							className='bg-red-300 px-7 py-2 rounded text-slate-800'
+							type='submit'
+						>
+							Subir prenda
 						</button>
 					</div>
 				</form>

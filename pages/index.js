@@ -9,7 +9,7 @@ export default function Home() {
 	return (
 		<Layout>
 			<Head>
-				<title>ChicZone - Tienda de ropa </title>
+				<title>ChicZone - Boutique de moda femenina. </title>
 				<meta name='description' content='ChicZone - Tienda de ropa' />
 				<meta property='og:type' content='website' />
 				<meta
