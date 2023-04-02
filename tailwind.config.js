@@ -17,6 +17,14 @@ module.exports = {
 				instaPu: '#962fbf',
 				instaB: '#4f5bd5',
 			},
+			backgroundColor: {
+				body: '#FBF1EE',
+				btn: '#586275',
+				btnVolver: '#817D90',
+			},
+			textColor: {
+				btnText: '#F2DCDE',
+			},
 			fontFamily: {
 				formulario: ['Bitter', 'serif'],
 				anuncio: ['Open Sans', 'sans-serif'],

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/underConstruction/Layout';
 // import Layout from '../components/Layout';
-import dentro from '../components/images/dentro2.jpg';
+// import dentro from '../components/images/dentro2.jpg';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -50,34 +50,34 @@ export default function Productos({ productos }) {
 					}}
 				/>
 			</div> */}
-			<div className='xs:w-full xs:px-3 xl:max-w-6xl xl:mx-auto mt-24'>
+			<div className='xs:w-full xs:px-3 xl:max-w-6xl xl:mx-auto'>
 				{/* <div className='max-w-6xl xs:mt-24 flex flex-wrap gap-2 justify-center mx-auto xs:w-full '> */}
-				<div className='pt-24 grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xl:gap-4'>
+				<div className='pt-24 grid xs:grid-cols-1 xs:gap-6 xs:px-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-6'>
 					{productos.map((product) => (
-						<div className='mb-5 mx-2  px-2 py-2 rounded-xl' key={product.id}>
-							<div className='w-full flex justify-center'>
+						<div className='mx-2 px-2 py-10 rounded-xl' key={product.id}>
+							<div className='lg:mb-10 flex justify-center'>
 								<img
 									src={product.images || product.url}
 									alt='img'
-									className='rounded-lg'
-									layout='responsive'
+									// layout='responsive'
 									style={{
 										width: '100%',
 										objectFit: 'contain',
 										height: '250px',
+										borderRadius: '15%',
 									}}
 								/>
 							</div>
-							<h5 className='capitalize font-bold mt-2 mb-1 truncate xs:text-md xl:text-xl'>
+							<h5 className='capitalize font-bold mt-4 mb-1 pl-5 truncate xs:text-md xl:text-xl'>
 								{product.name}
 							</h5>
-							<div className=' font-semibold mb-2 xs:text-sm'>
+							<div className=' font-semibold mb-2 pl-5 xs:text-sm'>
 								<p>{product.price}.00 €</p>
 							</div>
 
-							<div className='justify-center flex '>
+							<div className='justify-center flex'>
 								<button
-									className='bg-brownLogo px-3 py-1  rounded text-white  bottom-1'
+									className='bg-btn px-8 py-2  rounded text-white bottom-1'
 									onClick={() => router.push(`/producto/${product.id}`)}
 								>
 									Ver prenda

@@ -4,10 +4,10 @@ import Nav from './Nav';
 
 function Layout({ children }) {
 	return (
-		<div className='w-full'>
+		<div className='flex flex-col min-h-screen w-full'>
 			<Nav />
-			<main>{children}</main>
-			{/* <Footer /> */}
+			<main className='flex-1 bg-body'>{children}</main>
+			<Footer />
 		</div>
 	);
 }
