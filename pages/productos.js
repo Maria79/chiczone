@@ -54,7 +54,7 @@ export default function Productos({ productos }) {
 				{/* <div className='max-w-6xl xs:mt-24 flex flex-wrap gap-2 justify-center mx-auto xs:w-full '> */}
 				<div className='pt-24 grid xs:grid-cols-1 xs:gap-6 xs:px-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-6'>
 					{productos.map((product) => (
-						<div className='mx-2 px-2 py-10 rounded-xl' key={product.id}>
+						<div className='mx-2 px-2 pb-10 rounded-xl' key={product.id}>
 							<div className='lg:mb-10 flex justify-center'>
 								<img
 									src={product.images || product.url}
