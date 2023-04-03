@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../images/logo.png';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+
 import Menu from '../Menu/menu';
 
 //
@@ -22,7 +20,7 @@ function Nav() {
 
 	//
 	return (
-		<header className='relative'>
+		<header className='relative z-20'>
 			<div className='fixed w-full h-20 bg-white top-0'>
 				<div className='flex relative max-w-6xl mx-auto'>
 					<div className='absolute w-full z-20 top-0'>

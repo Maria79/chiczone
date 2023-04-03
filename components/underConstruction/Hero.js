@@ -1,17 +1,15 @@
 // import Link from 'next/link';
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import tienda from '../images/tienda-entrada.jpg';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import PlaceIcon from '@mui/icons-material/Place';
-import CallIcon from '@mui/icons-material/Call';
-import Facebook from './facebook';
+import Layout from './Layout';
 
 function Hero() {
 	return (
-		<div className=''>
-			<Image src={tienda} className='min-h-full w-full -z-10' alt='' fill />
+		<Layout>
+			<div>
+				<Image src={tienda} className='w-full' alt='' fill />
+			</div>
 			{/* <div className='relative top-36 z-10'>
 				<img
 					src='https://prestashop.coderplace.com/PRS01/PRS01022/modules/tm_imageslider/views/img/sample-1.jpg'
@@ -23,7 +21,7 @@ function Hero() {
 					<button className='bg-black text-white px-2 py-1'>SHOP NOW</button>
 				</div>
 			</div> */}
-		</div>
+		</Layout>
 	);
 }
 

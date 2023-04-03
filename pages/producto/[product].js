@@ -89,12 +89,20 @@ export default function Product({ producto }) {
 						<p className=' first-letter:capitalize'>
 							{producto.desc || producto.description}
 						</p>
-						<p className='mt-2 text-slate-700'>
+						{/* <p className='mt-2 text-slate-700'>
 							Talla:{' '}
 							<span className='font-semibold'>
 								{producto.size || producto.sizes}
 							</span>
-						</p>
+						</p> */}
+						<ul className='mt-2 text-slate-700'>
+							<li className='font-semibold'>Talla:</li>
+							{producto.sizes.map((size, index) => (
+								<li key={index} className='ml-2'>
+									{size}
+								</li>
+							))}
+						</ul>
 						<p className='mt-2 text-slate-700 font-bold'>
 							{producto.price}.00 €
 						</p>

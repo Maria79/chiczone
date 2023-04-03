@@ -4,7 +4,7 @@ import React from 'react';
 function Footer() {
 	const currentYear = new Date().getFullYear();
 	return (
-		<footer className='bg-gray-800 text-white py-4 bottom-0 mt-auto'>
+		<footer className='z-10 bg-gray-800 text-white py-4 bottom-0 mt-auto'>
 			<div className='container mx-auto px-4'>
 				<p>&copy; {currentYear} Chic Zone</p>
 			</div>

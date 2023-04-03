@@ -7,7 +7,7 @@ import Menu from '../components/Menu/menu';
 export default function Home() {
 	// const router = useRouter();
 	return (
-		<Layout>
+		<div>
 			<Head>
 				<title>ChicZone - Boutique de moda femenina. </title>
 				<meta name='description' content='ChicZone - Tienda de ropa' />
@@ -27,7 +27,6 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Hero />
-			{/* <Facebook /> */}
-		</Layout>
+		</div>
 	);
 }
