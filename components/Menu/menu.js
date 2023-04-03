@@ -11,7 +11,7 @@ function Menu() {
 				</li>
 				<li className='text-menu-link flex items-center hover:text-slate-600 cursor-pointer'>
 					<ArrowRightIcon></ArrowRightIcon>
-					<Link href='/camisetas'>Camisetas </Link>
+					<Link href='/camiseta'>Camisetas </Link>
 				</li>
 				<li className='text-menu-link flex items-center hover:text-slate-600 cursor-pointer'>
 					<ArrowRightIcon></ArrowRightIcon>
@@ -19,15 +19,15 @@ function Menu() {
 				</li>
 				<li className='text-menu-link flex items-center cursor-pointer hover:text-slate-600 '>
 					<ArrowRightIcon></ArrowRightIcon>
-					<Link href='/vestidos'>Vestidos </Link>
+					<Link href='/vestido'>Vestidos </Link>
 				</li>
 				<li className='text-menu-link flex items-center cursor-pointer hover:text-slate-600 '>
 					<ArrowRightIcon></ArrowRightIcon>
-					<Link href='/chalecos'>Chalecos </Link>
+					<Link href='/chaleco'>Chalecos </Link>
 				</li>
 				<li className='text-menu-link flex items-center cursor-pointer hover:text-slate-600 '>
 					<ArrowRightIcon></ArrowRightIcon>
-					<Link href='/abrigos'>Abrigos </Link>
+					<Link href='/abrigo'>Abrigos </Link>
 				</li>
 				{/* <li className='text-menu-link flex items-center cursor-pointer hover:text-slate-600 '>
 					<ArrowRightIcon></ArrowRightIcon>

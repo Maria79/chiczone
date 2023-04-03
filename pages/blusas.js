@@ -75,7 +75,7 @@ export default function Blusas({ productos }) {
 export const getServerSideProps = async (context) => {
 	const q = query(
 		collection(db, 'producto'),
-		where('tipo', '==', 'blusa'),
+		where('tipo', '==', 'blusas'),
 		orderBy('name', 'asc')
 	);
 	const querySnapshot = await getDocs(q);

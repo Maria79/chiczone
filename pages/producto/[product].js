@@ -108,7 +108,7 @@ export default function Product({ producto }) {
 							<button
 								// style={{ backgroundColor: '#FBF1EE ' }}
 								className='bg-btnVolver text-btnText text-lg border-gray-400 shadow-md px-8 py-2 rounded hover:shadow-lg'
-								onClick={() => router.push('/productos')}
+								onClick={() => router.push(`/${producto.tipo}`)}
 							>
 								Volver
 							</button>
