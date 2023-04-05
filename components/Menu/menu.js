@@ -1,9 +1,22 @@
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Menu() {
 	const [showSubMenu, setShowSubMenu] = useState(false);
+	// useEffect(() => {
+	// 	function handleClickOutside(event) {
+	// 		if (showSubMenu && !event.target.closest('.sub-menu')) {
+	// 			setShowSubMenu(false);
+	// 		}
+	// 	}
+
+	// 	document.addEventListener('click', handleClickOutside);
+
+	// 	return () => {
+	// 		document.removeEventListener('click', handleClickOutside);
+	// 	};
+	// }, [showSubMenu]);
 	return (
 		<div className='max-w-2xl w-full mx-auto pl-8 py-4 rounded-lg bg-slate-50 shadow-sm'>
 			<ul className='flex flex-col gap-4 my-10'>
@@ -31,24 +44,25 @@ function Menu() {
 					<ArrowRightIcon></ArrowRightIcon>
 					<Link href='/abrigo'>Abrigos </Link>
 				</li>
-				<li className='relative menu-item text-menu-link flex items-center cursor-pointer  hover:text-slate-600'>
-					<ArrowRightIcon></ArrowRightIcon>
-					<div className='' onClick={() => setShowSubMenu(!showSubMenu)}>
-						Accesorios{' '}
-					</div>
+				<li
+					className='relative menu-item text-menu-link flex items-center cursor-pointer hover:text-slate-600'
+					onClick={() => setShowSubMenu(!showSubMenu)}
+				>
+					<ArrowRightIcon />
+					<div className=''>Accesorios </div>
 					<ul
 						className={`absolute sub-menu left-28 top-0 ${
 							showSubMenu ? '' : 'hidden'
 						}`}
 					>
 						<li className='flex items-center'>
-							<ArrowRightIcon></ArrowRightIcon>
+							<ArrowRightIcon />
 							<Link href='/accesorios/bolsos'>
 								<div className='text-gray-900 hover:text-gray-500'>Bolsos</div>
 							</Link>
 						</li>
 						<li className='flex items-center'>
-							<ArrowRightIcon></ArrowRightIcon>
+							<ArrowRightIcon />
 							<Link href='/accesorios/carteras'>
 								<div className='text-gray-900 hover:text-gray-500'>
 									Carteras
@@ -56,7 +70,7 @@ function Menu() {
 							</Link>
 						</li>
 						<li className='flex items-center'>
-							<ArrowRightIcon></ArrowRightIcon>
+							<ArrowRightIcon />
 							<Link href='/accesorios/cinturon'>
 								<div className='text-gray-900 hover:text-gray-500'>
 									Cinturón
