@@ -32,9 +32,9 @@ export default function Camisetas({ productos }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='xs:w-full xs:px-3 xl:max-w-6xl xl:mx-auto'>
-				<div className='pt-24 grid xs:grid-cols-1 xs:gap-6 xs:px-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-6'>
+				<div className='pt-32 grid xs:grid-cols-1 xs:gap-6 xs:px-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-6'>
 					{productos.map((product) => (
-						<div className='mx-2 px-2 pb-10 rounded-xl' key={product.id}>
+						<div className='mx-2 px-2 pb-6 rounded-xl' key={product.id}>
 							<div className='lg:mb-10 flex justify-center'>
 								<img
 									src={product.images || product.url}

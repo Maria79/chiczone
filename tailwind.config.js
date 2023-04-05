@@ -18,7 +18,7 @@ module.exports = {
 				instaB: '#4f5bd5',
 			},
 			backgroundColor: {
-				body: '#FBF1EE',
+				body: '#F9F1F0',
 				btn: '#586275',
 				btnVolver: '#817D90',
 			},

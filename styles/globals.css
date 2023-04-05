@@ -21,3 +21,9 @@ body {
 /* .text-menu-link:hover {
 	font-size: larger;
 } */
+.sub-menu {
+	display: none;
+}
+.menu-item:hover .sub-menu {
+	display: block;
+}
