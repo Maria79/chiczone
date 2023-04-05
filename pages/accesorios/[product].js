@@ -30,7 +30,7 @@ export default function Product({ producto }) {
 	const deleteProduct = async () => {
 		const { product } = query;
 		await deleteDoc(doc(db, 'producto', product));
-		router.push('/productos');
+		router.push(`/accesorios/${producto.tipo}`);
 	};
 
 	const [showZoomedIn, setShowZoomedIn] = useState(false);
@@ -43,7 +43,7 @@ export default function Product({ producto }) {
 		<Layout>
 			<div className='flex justify-center mt-6 py-16'>
 				<div className='xs:w-72 sm:w-96 rounded-md px-3 pt-10'>
-					<div className='mb-8'>
+					<div className=''>
 						<h2 className='capitalize text-2xl text-slate-700 font-bold'>
 							{producto.name}
 						</h2>
@@ -56,7 +56,7 @@ export default function Product({ producto }) {
 							style={{
 								width: '150%',
 								objectFit: 'contain',
-								height: '350px',
+								height: '200px',
 								cursor: 'pointer',
 							}}
 							onClick={handleClick} // add onClick event listener to the image
@@ -85,7 +85,7 @@ export default function Product({ producto }) {
 							</div>
 						)}
 					</div>
-					<div className='my-6'>
+					<div className='my-1'>
 						<p className=' first-letter:capitalize'>
 							{producto.desc || producto.description}
 						</p>
