@@ -31,12 +31,11 @@ function Menu() {
 					<ArrowRightIcon></ArrowRightIcon>
 					<Link href='/abrigo'>Abrigos </Link>
 				</li>
-				<li
-					className='relative menu-item text-menu-link flex items-center cursor-pointer'
-					onClick={() => setShowSubMenu(!showSubMenu)}
-				>
+				<li className='relative menu-item text-menu-link flex items-center cursor-pointer  hover:text-slate-600'>
 					<ArrowRightIcon></ArrowRightIcon>
-					<div className=''>Accesorios </div>
+					<div className='' onClick={() => setShowSubMenu(!showSubMenu)}>
+						Accesorios{' '}
+					</div>
 					<ul
 						className={`absolute sub-menu left-28 top-0 ${
 							showSubMenu ? '' : 'hidden'
