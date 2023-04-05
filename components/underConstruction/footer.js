@@ -10,11 +10,8 @@ function Footer() {
 	const currentYear = new Date().getFullYear();
 	return (
 		<footer className='z-10 bg-gray-800 text-white py-4 bottom-0 mt-auto'>
-			<div className='container mx-auto px-4 flex flex-wrap justify-between items-center'>
-				<p className='text-center sm:text-left'>
-					&copy; {new Date().getFullYear()} Chic Zone. All Rights Reserved.
-				</p>
-				<div className='flex justify-center sm:justify-end items-center mt-2 sm:mt-0'>
+			<div className='max-w-6xl mx-auto px-4 flex flex-col md:flex-row flex-wrap justify-between items-center'>
+				<div className='flex justify-center flex-col md:flex-row sm:justify-end items-center mt-2 sm:mt-0'>
 					<p className='mr-4 flex'>
 						{/* Email:{' '} */}
 						<EnvelopeOpenIcon className='h-5 w-5 mr-2' />
@@ -31,6 +28,9 @@ function Footer() {
 						<a href='https://wa.me/+34634309049'>634 30 90 49</a>
 					</p>
 				</div>
+				<p className='text-center sm:text-left'>
+					&copy; {new Date().getFullYear()} Chic Zone. All Rights Reserved.
+				</p>
 			</div>
 		</footer>
 
