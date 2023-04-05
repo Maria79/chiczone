@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 function Menu() {
+	const [showSubMenu, setShowSubMenu] = useState(false);
 	return (
 		<div className='max-w-2xl w-full mx-auto pl-8 py-4 rounded-lg bg-slate-50 shadow-sm'>
 			<ul className='flex flex-col gap-4 my-10'>
@@ -30,20 +31,27 @@ function Menu() {
 					<ArrowRightIcon></ArrowRightIcon>
 					<Link href='/abrigo'>Abrigos </Link>
 				</li>
-				<li className='relative menu-item text-menu-link flex items-center cursor-pointer hover:text-slate-600 '>
+				<li
+					className='relative menu-item text-menu-link flex items-center cursor-pointer'
+					onClick={() => setShowSubMenu(!showSubMenu)}
+				>
 					<ArrowRightIcon></ArrowRightIcon>
 					<div className=''>Accesorios </div>
-					<ul className='absolute sub-menu left-28 top-0'>
+					<ul
+						className={`absolute sub-menu left-28 top-0 ${
+							showSubMenu ? '' : 'hidden'
+						}`}
+					>
 						<li className='flex items-center'>
 							<ArrowRightIcon></ArrowRightIcon>
 							<Link href='/accesorios/bolsos'>
-								<div className='text-gray-500 hover:text-gray-900'>Bolsos</div>
+								<div className='text-gray-900 hover:text-gray-500'>Bolsos</div>
 							</Link>
 						</li>
 						<li className='flex items-center'>
 							<ArrowRightIcon></ArrowRightIcon>
 							<Link href='/accesorios/carteras'>
-								<div className='text-gray-500 hover:text-gray-900'>
+								<div className='text-gray-900 hover:text-gray-500'>
 									Carteras
 								</div>
 							</Link>
@@ -51,7 +59,7 @@ function Menu() {
 						<li className='flex items-center'>
 							<ArrowRightIcon></ArrowRightIcon>
 							<Link href='/accesorios/cinturon'>
-								<div className='text-gray-500 hover:text-gray-900'>
+								<div className='text-gray-900 hover:text-gray-500'>
 									Cinturón
 								</div>
 							</Link>
