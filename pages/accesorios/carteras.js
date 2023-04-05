@@ -59,7 +59,7 @@ export default function Accesorios({ productos }) {
 							<div className='justify-center flex'>
 								<button
 									className='bg-btn px-8 py-2  rounded text-white bottom-1'
-									onClick={() => router.push(`/producto/${product.id}`)}
+									onClick={() => router.push(`/accesorios/${product.id}`)}
 								>
 									Ver prenda
 								</button>
@@ -75,7 +75,7 @@ export default function Accesorios({ productos }) {
 export const getServerSideProps = async (context) => {
 	const q = query(
 		collection(db, 'producto'),
-		where('tipo', '==', 'accesorios-carteras'),
+		where('tipo', '==', 'carteras'),
 		orderBy('name', 'asc')
 	);
 	const querySnapshot = await getDocs(q);
