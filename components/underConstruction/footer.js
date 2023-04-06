@@ -19,14 +19,14 @@ function Footer() {
 							chiczonepuerto@gmail.com
 						</a>
 					</p>
-					<p className='mr-4 flex'>
+					{/* <p className='mr-4 flex'>
 						<PhoneIcon className='h-5 w-5 mr-2' />{' '}
 						<a href='tel:+34922984288'>922 98 42 88</a>
 					</p>
 					<p className='ml-4 flex'>
 						<ChatBubbleOvalLeftIcon className='h-5 w-5 mr-2' />{' '}
 						<a href='https://wa.me/+34634309049'>634 30 90 49</a>
-					</p>
+					</p> */}
 				</div>
 				<p className='text-center sm:text-left'>
 					&copy; {new Date().getFullYear()} Chic Zone. All Rights Reserved.
